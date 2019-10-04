@@ -1,0 +1,76 @@
+
+
+; Input Ports:
+;   0 - start_address
+;   1 - end_address
+;   2 - data_from_memory
+
+; Output Ports:
+;   0 - addr_to_memory
+;   1 - count
+;   2 - done
+
+    CONSTANT StartAddressPort,   0'd
+    CONSTANT EndAddreessPort,    1'd
+    CONSTANT DataFromMemPort1,   2'd
+
+    CONSTANT AddrToMemPort1,     0'd
+    CONSTANT CountPort,          1'd
+    CONSTANT DonePort,           2'd
+
+contar_primos:
+    INPUT s1, StartAddressPort
+    INPUT s2, EndAddreessPort
+    LOAD s3, 0'd                ; count of primos
+
+contar_primos_loop:
+    OUTPUT s1, AddrToMemPort1
+    INPUT s0, DataFromMemPort1
+    CALL es_primo               ; deja en s0 1 si es primo o 0 si no lo es
+    ADD s3, s0
+    ADD s1, 1'd
+    COMPARE s1, s2
+    JUMP Z, contar_primos_end
+    JUMP contar_primos_loop
+contar_primos_end:
+    OUTPUT  s3, CountPort
+    LOAD s0, 1'd
+    OUTPUT s0, DonePort
+contar_primos_loop_true:
+    JUMP contar_primos_loop_true      ; hacer un while true
+
+
+es_primo:
+    COMPARE s0, 2'd
+    JUMP Z, es_primo_si
+    LOAD s6, 0'd
+    ADD s6, s0
+    AND s6, 1'd
+    COMPARE s6, 0'd
+    JUMP Z, es_primo_no
+    CALL search
+    RETURN
+es_primo_si:
+    LOAD s0, 1'd
+    RETURN
+es_primo_no:
+    LOAD s0, 0'd
+    RETURN
+    
+search:
+    LOAD s6, 0'd
+    ADD s6, s0          ; numero a buscar
+    LOAD s7, 200'd      ; addr inicial del arreglo
+search_loop:
+    OUTPUT s7, AddrToMemPort1
+    INPUT s8, DataFromMemPort1
+    COMPARE s6, s8              ; comparo si el numero en esa posicion es igual al buscado
+    JUMP Z, search_found
+    ADD s7, 1'd
+    COMPARE s7, 253'd
+    JUMP C, search_loop         ; si no hemos terminado de recorrer volvemos a iterar
+    LOAD s0, 0'd
+    RETURN
+search_found:
+    LOAD s0, 1'd
+    RETURN
