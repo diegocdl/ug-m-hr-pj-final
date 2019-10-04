@@ -22,14 +22,14 @@
 
 module pj_final_testbench;
     reg clk;
-    reg restart;
+    reg reset;
     reg [15:0] sw;
-    wire [15:0] leds;
+    wire [15:0] led;
     pj_final uut(
         .clk(clk),
-        .restart(restart),
+        .reset(reset),
         .sw(sw),
-        .leds(leds)
+        .led(led)
     );
     
     always begin
@@ -37,8 +37,8 @@ module pj_final_testbench;
         forever #10 clk = ~clk;
     end
     initial begin
-        restart = 1;
+        reset = 1;
         #50
-        restart = 0;
+        reset = 0;
     end
 endmodule

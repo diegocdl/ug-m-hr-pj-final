@@ -246,14 +246,14 @@ module EightPortArray(
       Data[189]=0;
       Data[190]=0;     
       Data[191]=0;
-      Data[192]=0;    
+      Data[192]=53;    
       Data[193]=0;
       Data[194]=0;    
       Data[195]=0;
       Data[196]=0;    
       Data[197]=0;
       Data[198]=0;    
-      Data[199]=0;
+      Data[199]=41;
       Data[200]=3;
       Data[201]=5;
       Data[202]=7;    

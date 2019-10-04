@@ -22,134 +22,63 @@
 
 module pj_final(
     input clk,
-    input restart,
+    input reset,
     input [15:0] sw,
-    output reg [15:0] led
+    output [15:0] led,
+    output [6:0] seg,
+    output [3:0] an
     );
     
-    //
-///////////////////////////////////////////////////////////////////////////////////////////
-// Signals
-///////////////////////////////////////////////////////////////////////////////////////////
-//
-
-// Signals used to create internal 200MHz clock from 200MHz differential clock
-
-//wire        clk200;
-//wire        clk;
-
-// Signal used to specify the clock frequency in megahertz.
-
-//wire [7:0]  clock_frequency_in_MHz; 
-
-// Signals used to connect KCPSM6
-reg [31:0] count = 32'd0;
-wire [11:0] address;
-wire [17:0] instruction;
-wire        bram_enable;
-reg  [7:0]  in_port;
-wire [7:0]  out_port;
-wire [7:0]  port_id;
-wire        write_strobe;
-wire        k_write_strobe;
-wire        read_strobe;
-wire        interrupt;   
-wire        interrupt_ack;
-wire        kcpsm6_sleep;  
-wire        kcpsm6_reset;
-wire        rdl;
-wire   [7:0]     DataBus0;
-reg    [7:0]    AddressBus0;
-
-//
-///////////////////////////////////////////////////////////////////////////////////////////
-//
-// Start of circuit description
-//
-///////////////////////////////////////////////////////////////////////////////////////////
-//
-
-    /////////////////////////////////////////////////////////////////////////////////////////
-    // Instantiate KCPSM6 and connect to program ROM
-    /////////////////////////////////////////////////////////////////////////////////////////
-    //
-    // The generics can be defined as required. In this case the 'hwbuild' value is used to 
-    // define a version using the ASCII code for the desired letter. 
-    //
+    reg [31:0] ticks;
+    reg [31:0] ticks_elapsed = 32'd0;
+    reg [31:0] displayNum = 16'd0;
     
+    // Processor 0
+    wire   [7:0]     DataBus0;
+    wire    [7:0]    AddressBus0;
     
-    kcpsm6 #(
-    .interrupt_vector	(12'h7FF),
-    .scratch_pad_memory_size(64),
-    .hwbuild		(8'h41))            // 41 hex is ASCII Character "A"
-    processor (
-    .address 		(address),
-    .instruction 	(instruction),
-    .bram_enable 	(bram_enable),
-    .port_id 		(port_id),
-    .write_strobe 	(write_strobe),
-    .k_write_strobe 	(k_write_strobe),
-    .out_port 		(out_port),
-    .read_strobe 	(read_strobe),
-    .in_port 		(in_port),
-    .interrupt 		(interrupt),
-    .interrupt_ack 	(interrupt_ack),
-    .reset 		(kcpsm6_reset),
-    .sleep		(kcpsm6_sleep),
-    .clk 			(clk)); 
+    wire done0;
+    wire [7:0] count0;
     
-    // Reset connected to JTAG Loader enabled Program Memory
+    assign led = displayNum[31:16];
     
-    assign kcpsm6_reset = rdl;
-    
-    // Unused signals tied off until required.
-    // Tying to other signals used to minimise warning messages.
-    
-    assign kcpsm6_sleep = write_strobe && k_write_strobe;  // Always '0'
-    assign interrupt = interrupt_ack;
-    
-    // Development Program Memory 
-    //   JTAG Loader enabled for rapid code development. 
-    
-    count_primos #(
-    .C_FAMILY		   ("7S"),  
-    .C_RAM_SIZE_KWORDS	(2),  
-    .C_JTAG_LOADER_ENABLE	(1))
-    program_rom (
-    .rdl 			(rdl),
-    .enable 		(bram_enable),
-    .address 		(address),
-    .instruction 	(instruction),
-    .clk 			(clk));
+    displayDriver driver (
+        .clk(clk),
+        .num(displayNum),
+        .reset(reset),
+        .seg(seg),
+        .an(an)
+    );
     
     EightPortArray memory (
-        .reset(restart),
+        .reset(reset),
         .DataBus0(DataBus0),
         .AddressBus0(AddressBus0)
     );
     
     
-    always @ (posedge clk)
-    begin
-        case (port_id[1:0])
-            // Read UART status at port address 00 hex
-            2'b00 : in_port <= 8'd0;
-            2'b01 : in_port <= 8'd25;
-            2'b10 : in_port <= DataBus0;
-            // Specify don't care for all other inputs to obtain optimum implementation
-            default : in_port <= 8'bXXXXXXXX ;  
-        endcase;
-    end
-    always @ (posedge clk)
-    begin
-        // 'write_strobe' is used to qualify all writes to general output ports.
-        if (write_strobe == 1'b1) begin
-            if (port_id == 3'b0) begin
-                AddressBus0 <= out_port;
-            end
-            if (port_id == 3'b1) begin
-                led <= {8'b0, out_port};
-            end
+    Pico p0 (
+        .clk(clk),
+        .reset(reset),
+        .DataBus(DataBus0),
+        .startAddr(8'd0),
+        .endAddr(8'd200),
+        .AddressBus(AddressBus0), 
+        .done(done0),
+        .count(count0)
+    );
+
+    
+    always@(posedge clk) begin
+        ticks <= ticks + 1;
+        if (ticks_elapsed == 16'd0 && done0) begin
+            ticks_elapsed <= ticks[15:0];
+        end
+        
+        if(sw[0] == 0) begin
+            displayNum[15:0] = count0;
+        end else begin
+            displayNum = ticks_elapsed;
         end
     end
 endmodule
