@@ -72,7 +72,7 @@ module pj_final(
     always@(posedge clk) begin
         ticks <= ticks + 1;
         if (ticks_elapsed == 16'd0 && done0) begin
-            ticks_elapsed <= ticks[15:0];
+            ticks_elapsed <= ticks;
         end
         
         if(sw[0] == 0) begin
