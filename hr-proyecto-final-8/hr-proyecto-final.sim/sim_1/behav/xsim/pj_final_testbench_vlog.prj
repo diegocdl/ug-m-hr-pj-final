@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../hr-proyecto-final.srcs/sources_1/new/Pico.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/new/count_primos.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/new/displayDriver.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/imports/new/eight-port-array-worse.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/imports/new/freqDiv.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/imports/diego/Downloads/KCPSM6_Release9_30Sept14/Verilog/kcpsm6.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/new/pj_final.v" \
+"../../../../hr-proyecto-final.srcs/sources_1/imports/new/seg7Driver.v" \
+"../../../../hr-proyecto-final.srcs/sim_1/new/pj_final_testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

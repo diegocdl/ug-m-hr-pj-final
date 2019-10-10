@@ -2,8 +2,8 @@
 # Vivado v2019.1.3 (64-bit)
 # SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
 # IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
-# Start of session at: Thu Oct  3 21:26:37 2019
-# Process ID: 18428
+# Start of session at: Wed Oct  9 08:58:57 2019
+# Process ID: 2332
 # Current directory: C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.runs/synth_1
 # Command line: vivado.exe -log pj_final.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pj_final.tcl
 # Log file: C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.runs/synth_1/pj_final.vds
@@ -16,9 +16,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8492 
+INFO: Helper process launched with PID 19384 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 801.895 ; gain = 177.582
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 802.223 ; gain = 177.988
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'pj_final' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/pj_final.v:23]
 INFO: [Synth 8-6157] synthesizing module 'displayDriver' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/displayDriver.v:23]
@@ -30,9 +30,11 @@ INFO: [Synth 8-6155] done synthesizing module 'seg7Driver' (2#1) [C:/Users/diego
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/displayDriver.v:65]
 INFO: [Synth 8-6155] done synthesizing module 'displayDriver' (3#1) [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/displayDriver.v:23]
 WARNING: [Synth 8-689] width (32) of port connection 'num' does not match port width (16) of module 'displayDriver' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/pj_final.v:54]
-INFO: [Synth 8-6157] synthesizing module 'EightPortArray' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'EightPortArray' (4#1) [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:22]
-WARNING: [Synth 8-7023] instance 'memory' of module 'EightPortArray' has 17 connections declared, but only 5 given [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/pj_final.v:60]
+INFO: [Synth 8-6157] synthesizing module 'EightPortArrayRandom' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:44]
+WARNING: [Synth 8-3848] Net Data[83] in module/entity EightPortArrayRandom does not have driver. [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:64]
+WARNING: [Synth 8-3848] Net Data[71] in module/entity EightPortArrayRandom does not have driver. [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:64]
+INFO: [Synth 8-6155] done synthesizing module 'EightPortArrayRandom' (4#1) [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:44]
+WARNING: [Synth 8-7023] instance 'memory' of module 'EightPortArrayRandom' has 17 connections declared, but only 5 given [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/pj_final.v:60]
 INFO: [Synth 8-6157] synthesizing module 'Pico' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/new/Pico.v:23]
 INFO: [Synth 8-6157] synthesizing module 'kcpsm6' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Downloads/KCPSM6_Release9_30Sept14/Verilog/kcpsm6.v:77]
 	Parameter hwbuild bound to: 8'b01000001 
@@ -383,7 +385,7 @@ WARNING: [Synth 8-3331] design pj_final has unconnected port sw[3]
 WARNING: [Synth 8-3331] design pj_final has unconnected port sw[2]
 WARNING: [Synth 8-3331] design pj_final has unconnected port sw[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 870.531 ; gain = 246.219
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 869.711 ; gain = 245.477
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -396,10 +398,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 870.531 ; gain = 246.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 869.711 ; gain = 245.477
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 870.531 ; gain = 246.219
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 869.711 ; gain = 245.477
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 362 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -413,7 +415,7 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/pj_final_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 986.137 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 987.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 248 instances were transformed.
   FD => FDRE: 96 instances
@@ -423,80 +425,126 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 8 instances
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 986.137 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 987.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[255]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[252]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[251]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[250]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[249]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[248]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[247]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[246]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[245]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[244]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[243]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[242]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[241]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[240]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[239]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[238]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[237]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[236]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[235]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[234]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[233]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[232]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[231]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[230]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[229]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[228]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[227]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[226]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[225]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[224]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[223]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[222]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[221]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[220]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[219]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[218]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[217]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[216]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[215]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[214]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[213]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[212]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[211]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[210]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[209]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[208]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[207]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[206]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[205]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[204]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[203]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[202]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[201]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[200]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
-WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[1]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/diego/Documents/Hardware Reconfigurable/eight-port-array.v:44]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[255]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[252]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[251]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[250]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[249]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[248]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[247]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[246]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[245]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[244]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[243]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[242]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[241]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[240]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[239]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[238]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[237]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[236]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[235]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[234]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[233]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[232]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[231]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[230]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[229]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[228]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[227]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[226]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[225]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[224]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[223]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[222]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[221]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[220]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[219]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[218]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[217]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[216]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[215]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[214]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[213]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[212]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[211]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[210]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[209]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[208]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[207]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[206]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[205]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[204]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[203]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[202]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[201]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[200]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[199]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[198]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[196]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[194]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[193]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[192]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[191]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[190]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[188]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[187]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[185]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[184]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[183]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[182]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[181]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[180]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[179]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[177]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[176]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[175]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[174]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[173]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[170]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[168]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[166]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[165]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[164]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[163]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[162]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[157]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[156]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[154]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[153]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[152]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[151]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[150]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[148]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[146]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[145]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[141]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[140]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[139]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[137]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[136]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[135]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+WARNING: [Synth 8-327] inferring latch for variable 'Data_reg[132]' [C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.srcs/sources_1/imports/new/EightPortArrayRandom.v:66]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -609,115 +657,217 @@ WARNING: [Synth 8-3331] design pj_final has unconnected port sw[4]
 WARNING: [Synth 8-3331] design pj_final has unconnected port sw[3]
 WARNING: [Synth 8-3331] design pj_final has unconnected port sw[2]
 WARNING: [Synth 8-3331] design pj_final has unconnected port sw[1]
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[239][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[238][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[237][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[236][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[235][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[234][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[233][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[232][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[231][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[230][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[228][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[227][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[226][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[225][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[224][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[250][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[249][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[248][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[252][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[247][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[246][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[245][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[244][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[243][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[242][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[241][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[240][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[223][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[222][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[221][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[220][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[219][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[218][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[217][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[216][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[215][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[213][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[212][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[210][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[209][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[208][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[211][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[214][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[207][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[206][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[205][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[204][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[203][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[202][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[201][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[200][6]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[251][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[229][6]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[1][6]' (LD) to 'memory/Data_reg[252][2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[237][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[234][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[233][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[229][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[228][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[227][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[226][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[225][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[247][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[245][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[241][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[223][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[222][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[219][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[217][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[216][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[213][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[210][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[209][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[207][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[206][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[205][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[203][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[200][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[199][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[198][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[202][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[193][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[190][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[187][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[224][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[183][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[180][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[238][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[173][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[204][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[174][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[184][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[165][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[164][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[163][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[215][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[235][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[252][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[157][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[153][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[152][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[150][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[231][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[146][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[232][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[131][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[211][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[148][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[141][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[140][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[139][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[156][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[136][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[168][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[126][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[121][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[181][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[118][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[117][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[128][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[194][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[249][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[109][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[106][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[177][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[123][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[101][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[100][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[240][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[176][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[188][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[94][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[191][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[91][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[89][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[88][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[192][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[248][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[85][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[84][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[239][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[137][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[79][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[151][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[77][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[76][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[196][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[74][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[73][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[243][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[70][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[69][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[68][6] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[67][6] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][6]' (LD) to 'memory/Data_reg[255][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[239][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[238][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[237][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[236][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[235][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[234][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[233][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[232][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[231][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[230][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[228][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[227][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[226][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[225][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[224][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[250][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[249][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[248][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[252][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[247][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[246][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[245][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[244][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[243][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[242][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[241][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[240][7]' (LD) to 'memory/Data_reg[252][0]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[223][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[222][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[221][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[220][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[219][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[218][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[217][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[216][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[215][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[213][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[212][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[210][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[209][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[208][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[211][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[214][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[207][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Synth 8-3886] merging instance 'memory/Data_reg[206][7]' (LD) to 'memory/Data_reg[252][2]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (memory/\Data_reg[251][1] )
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (memory/\Data_reg[1][1] )
-WARNING: [Synth 8-3332] Sequential element (Data_reg[251][1]) is unused and will be removed from module EightPortArray.
-WARNING: [Synth 8-3332] Sequential element (Data_reg[1][1]) is unused and will be removed from module EightPortArray.
-WARNING: [Synth 8-3332] Sequential element (p0/processor/read_strobe_flop) is unused and will be removed from module pj_final.
-WARNING: [Synth 8-3332] Sequential element (p1/processor/read_strobe_flop) is unused and will be removed from module pj_final.
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][7]' (LD) to 'memory/Data_reg[255][0]'
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][4]' (LD) to 'memory/Data_reg[255][0]'
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][5]' (LD) to 'memory/Data_reg[255][0]'
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][2]' (LD) to 'memory/Data_reg[255][0]'
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][3]' (LD) to 'memory/Data_reg[255][0]'
+INFO: [Synth 8-3886] merging instance 'memory/Data_reg[255][0]' (LD) to 'memory/Data_reg[255][1]'
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[252][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[251][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[250][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[249][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[248][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[247][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[246][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[245][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[244][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[243][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[242][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][4]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][3]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][2]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][1]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[241][0]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[240][7]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[240][6]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[240][5]) is unused and will be removed from module EightPortArrayRandom.
+WARNING: [Synth 8-3332] Sequential element (Data_reg[240][4]) is unused and will be removed from module EightPortArrayRandom.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -729,13 +879,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 986.137 ; gain = 361.824
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 987.430 ; gain = 363.195
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -747,7 +897,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1002.688 ; gain = 378.375
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1002.043 ; gain = 377.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -771,7 +921,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -784,7 +934,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -796,25 +946,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -834,13 +984,13 @@ Report Cell Usage:
 |2     |CARRY4   |    19|
 |3     |LUT1     |     5|
 |4     |LUT2     |    14|
-|5     |LUT3     |    21|
-|6     |LUT4     |    32|
-|7     |LUT5     |    88|
-|8     |LUT6     |    82|
+|5     |LUT3     |    15|
+|6     |LUT4     |    23|
+|7     |LUT5     |   126|
+|8     |LUT6     |   123|
 |9     |LUT6_2   |   100|
 |10    |MUXCY    |    58|
-|11    |MUXF7    |    13|
+|11    |MUXF7    |    19|
 |12    |RAM32M   |     8|
 |13    |RAM64M   |     4|
 |14    |RAMB36E1 |     2|
@@ -859,28 +1009,28 @@ Report Instance Areas:
 +------+----------------+---------------+------+
 |      |Instance        |Module         |Cells |
 +------+----------------+---------------+------+
-|1     |top             |               |   886|
+|1     |top             |               |   956|
 |2     |  driver        |displayDriver  |   138|
 |3     |    divisor     |freqDiv        |    82|
-|4     |  p0            |Pico           |   305|
+|4     |  p0            |Pico           |   341|
 |5     |    processor   |kcpsm6_1       |   232|
 |6     |    program_rom |count_primos_2 |     1|
-|7     |  p1            |Pico_0         |   292|
+|7     |  p1            |Pico_0         |   326|
 |8     |    processor   |kcpsm6         |   236|
 |9     |    program_rom |count_primos   |     1|
 +------+----------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1007.855 ; gain = 267.938
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1007.855 ; gain = 383.543
+Synthesis finished with 0 errors, 0 critical warnings and 1449 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 1007.246 ; gain = 265.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1007.246 ; gain = 383.012
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 392 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 398 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1025.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1022.699 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 266 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 20 instances
@@ -892,12 +1042,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-224 Infos, 94 Warnings, 0 Critical Warnings and 0 Errors encountered.
+231 Infos, 237 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1025.051 ; gain = 656.445
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1025.051 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1022.699 ; gain = 653.379
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1022.699 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/diego/Documents/Hardware Reconfigurable/ug-maestria-hr-pj-final/hr-proyecto-final-2/hr-proyecto-final.runs/synth_1/pj_final.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pj_final_utilization_synth.rpt -pb pj_final_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Oct  3 21:27:28 2019...
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  9 08:59:44 2019...

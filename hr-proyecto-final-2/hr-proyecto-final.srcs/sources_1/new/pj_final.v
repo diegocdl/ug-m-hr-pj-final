@@ -57,7 +57,7 @@ module pj_final(
         .an(an)
     );
     
-    EightPortArray memory (
+    EightPortArrayRandom memory (
         .reset(reset),
         .DataBus0(DataBus0),
         .AddressBus0(AddressBus0),
